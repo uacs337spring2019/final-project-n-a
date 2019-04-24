@@ -28,7 +28,7 @@
     	}
     	else if (req.query.mode == "comments"){
         	let filename = "brewery_" + req.query.id + "_comments.txt";
-        	let directory = "./comments/";
+        	let directory = "./public/";
 
 	        let file = fs.readFileSync(filename, 'utf8');
 	        let lines = file.split("\n");
@@ -55,7 +55,7 @@
         const id = req.body.id;
 
         let filename = "brewery_" + id + "_comments.txt";
-        let directory = "./comments";
+        let directory = "./public";
 
         fs.appendFile(filename, name + ":::" + comment + "\r\n", function(err) {
             if(err) {
