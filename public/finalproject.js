@@ -237,7 +237,7 @@
 				},
 				body : JSON.stringify(message)
 			};
-			let url = "http://localhost:3000";
+			let url = "https://csc337-breweries-database.herokuapp.com";
 			fetch(url, fetchOptions)
 	            .then(checkStatus)
 	            .then(function(responseText) {
