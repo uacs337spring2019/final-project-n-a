@@ -257,7 +257,7 @@
 		let commentsArea = document.getElementById("commentsArea");
 		commentsArea.innerHTML = "";
 		
-        let url = "http://localhost:3000/?mode=comments&id=" + id;
+        let url = "https://csc337-breweries-database.herokuapp.com/?mode=comments&id=" + id;
 
         fetch(url)
             .then(checkStatus)
