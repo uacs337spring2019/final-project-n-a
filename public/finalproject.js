@@ -111,7 +111,6 @@ elements.
                 if (json.length == 0) {
                     alert("Not found.");
                     reload();
-                    break;
                 }
                 for (let i=0; i < json.length; i++) {
                     let tr = document.createElement("tr");
