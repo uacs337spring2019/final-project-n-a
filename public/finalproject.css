@@ -2,6 +2,7 @@
 Aleah Crawford & Nate Peters
 CSC 337 Spring 2019
 Final Project
+
 Style page for all pages
 */
 
@@ -16,9 +17,11 @@ body {
 	margin-right: auto;
 	background-color: black;
 	color: white;
+	border-radius: 1px;
+	border: 2px solid #FFFFFF;
 }
 
-#banner h1 {
+#banner h1, #banner p {
 	float: right;
 	font-size: 45px;
 	font-weight: bold;
@@ -26,10 +29,14 @@ body {
 	margin-top: 60px;
 }
 
-.home {
+#home, #back {
 	right: 8%;
 	position: absolute;
 	text-decoration: underline;
+}
+
+#home {
+	right: 25%;
 }
 
 #banner {
@@ -70,6 +77,3 @@ button {
 }
 
 
-#name {
-	margin-bottom: 5px;
-}

@@ -2,28 +2,31 @@
 Aleah Crawford & Nate Peters
 CSC 337, Spring 2019
 Final Project
-This page displays weather data.
+
+This page displays a webpage of breweries, users are able to input their state and city and get a list of breweries that they are able to explore
 -->
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Breweries</title>
 		<link href="finalproject.css" type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="finalproject.js"></script>
+		<script type="text/javascript" src="final2.js"></script>
 	</head>
 	<body>
 		<div id="main">
 			<div id="banner">
-				<img id="beer" src="beer.jpg" />
-				<h1>Brewery Database<span class="home">Home</span></h1>
+				<img id="beer" src="beer.jpg" alt="beer picture" />
+				<h1>Brewery Database</h1>
+				<p id="home">Home</p>
+				<p id="back">Back</p>
 			</div>
 			<div id="under">
-				<p>State: <input id="state" type="text" /></p>
-				<p>City: <input id="city" type="text" /></p>
+				<p>State:<input id="state" type="text" /></p>
+				<p>City:<input id="city" type="text" /></p>
 				<button id="submit">Go!</button>
 			</div>
 			<div id="bottom">
-				<img id="taps" src="taps.jpg" />
+				<img id="taps" src="taps.jpg" alt="tap picture"/>
 			</div>
 		</div>
 	</body>
