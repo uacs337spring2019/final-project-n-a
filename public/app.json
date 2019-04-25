@@ -1,0 +1,6 @@
+{
+	"name": "Breweries Database",
+	"description": "Provides list of breweries in given city or state.",
+	"repository": "https://github.com/uacs337spring2019/final-project-n-a.git",
+	"logo": "https://raw.githubusercontent.com/uacs337spring2019/final-project-n-a/master/beer.jpg",
+	"keywords": ["node", "express", "static"]}
