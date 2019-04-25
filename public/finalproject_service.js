@@ -1,3 +1,13 @@
+/**
+Aleah Crawford & Nate Peters
+CSC 337 Final Project
+Spring 2019
+
+Provides backend functionality of the web page. Listens for 
+get/post requests, writes/appends/reads from files, and makes
+json objects from files or api.
+**/
+
 "use strict";
 (function() {
 
@@ -19,6 +29,11 @@
 
     app.use(express.static('public'));
 
+    /**
+    If get request is made, either a json object is made
+    from api, or json object is made from file, and then sent
+    to the frontend. 
+    **/
     app.get('/', function(req, res) {
         res.header("Access-Control-Allow-Origin", "*");
         if (req.query.mode == undefined) {
@@ -48,6 +63,10 @@
 
     });
 
+    /**
+    If post request is made, writes data from json object and
+    writes it to a file.  
+    **/
     app.post('/', jsonParser, function(req, res) {
         res.header("Access-Control-Allow-Origin", "*");
         const name = req.body.name;

@@ -1,9 +1,12 @@
 /**
-Aleah Crawford & Nate Peter
+Aleah Crawford & Nate Peters
 CSC 337 Final Project
 Spring 2019
 
-
+Provides frontend functionality of the Breweries Database webpage. 
+Listens for events, requests data from api or service, displays
+data on webpage, sends input to service, and creates/styles html
+elements.
 **/
 
 (function() {
@@ -104,7 +107,12 @@ Spring 2019
             .then(checkStatus)
             .then(function(responseText) {
                 json = JSON.parse(responseText);
-                console.log(json);
+                console.log(json);;
+                if (json.length == 0) {
+                    alert("Not found.");
+                    reload();
+                    break;
+                }
                 for (let i=0; i < json.length; i++) {
                     let tr = document.createElement("tr");
                     let th1 = document.createElement("th");
