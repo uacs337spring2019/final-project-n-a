@@ -1,10 +1,11 @@
-
+"use strict";
 (function() {
 
     const express = require("express");
     const app = express();
 
     var fs = require("fs");
+
 
     const bodyParser = require('body-parser');
     const jsonParser = bodyParser.json();
@@ -27,9 +28,9 @@
     	}
     	else if (req.query.mode == "comments"){
         	let filename = "brewery_" + req.query.id + "_comments.txt";
-        	let directory = "./comments/";
+        	let directory = "./public/";
 
-	        let file = fs.readFileSync(directory + filename, 'utf8');
+	        let file = fs.readFileSync(filename, 'utf8');
 	        let lines = file.split("\n");
 	        let comments = [];
 	        for (var i=0; i < lines.length; i++) {
@@ -54,25 +55,16 @@
         const id = req.body.id;
 
         let filename = "brewery_" + id + "_comments.txt";
-        let directory = "./comments/";
+        let directory = "./public";
 
-        fs.appendFile(directory + filename, name + ":::" + comment + "\r\n", function(err) {
+        fs.appendFile(filename, name + ":::" + comment + "\r\n", function(err) {
             if(err) {
                 return console.log(err);
             }
             res.send(filename + " updated.");
         });
-	   
-    });
 
-    // app.post('/', jsonParser, function(req, res) {
-    // 	res.header("Access-Control-Allow-Origin", "*");
-    // 	fs.writeFile("breweries.txt", req.body, function(err) {
-    // 		if (err){
-    // 			return console.log(err);
-    // 		}
-    // 		res.send("File updated.");
-    // 	})
-    // })
-    app.listen(3000);
+    });
+    app.listen(process.env.PORT);
+
 })();

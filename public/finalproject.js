@@ -276,7 +276,7 @@ Spring 2019
                 },
                 body : JSON.stringify(message)
             };
-            let url = "http://localhost:3000";
+            let url = "https://csc337-breweries-database.herokuapp.com";
             fetch(url, fetchOptions)
                 .then(checkStatus)
                 .then(function(responseText) {
@@ -299,7 +299,7 @@ Spring 2019
         let commentsArea = document.getElementById("commentsArea");
         commentsArea.innerHTML = "";
 
-        let url = "http://localhost:3000/?mode=comments&id=" + id;
+        let url = "https://csc337-breweries-database.herokuapp.com/?mode=comments&id=" + id;
 
         fetch(url)
             .then(checkStatus)
